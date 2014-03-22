@@ -752,8 +752,14 @@ if (host.isCodeFoldingEnabled()) {
 
 			}
 
-			y += lineHeight;
+			//y += lineHeight;
 			line++;
+			try {
+				y = yForLine(alloc, line) + ascent;
+			} catch (BadLocationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			//count++;
 
 		}
